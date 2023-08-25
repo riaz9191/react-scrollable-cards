@@ -3,8 +3,8 @@ import { FaLayerGroup } from "react-icons/fa";
 import { FaCalendarDay, FaCalendarAlt } from "react-icons/fa";
 import { FaRocketchat } from "react-icons/fa6";
 import { GrAttachment } from "react-icons/gr";
-import Post_card from "./Cards/Post_card";
-const Card = () => {
+import Post_card from "./Post_card";
+const InCompleteCard = () => {
   return (
     <div className="card w-96 p-4  rounded-lg shadow-md">
       <div className="flex justify-between">
@@ -27,4 +27,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default InCompleteCard;
