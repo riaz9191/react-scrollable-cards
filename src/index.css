@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom-scrollbar.css */
+
+/* For Webkit based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 255, 0.694); /* Set the color of the thumb (scrollbar handle) */
+  border-radius: 4px; /* Set the border radius of the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the color of the track (scrollbar background) */
+}
+
+/* For Firefox */
+/* Note: Firefox uses a different approach for styling scrollbars */
+scrollbar-color: blue transparent; /* Set the color of the thumb and track */
