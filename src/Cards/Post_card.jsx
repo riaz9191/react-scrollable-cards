@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaLayerGroup, FaCalendarDay, FaCalendarAlt } from "react-icons/fa";
 import { FaRocketchat } from "react-icons/fa6";
 import { GrAttachment } from "react-icons/gr";
+import Modal from "./Modal";
+
+
 
 const Post_card = () => {
+  const [attachments, setAttachments] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleAttachment = (e) => {
+    const selectedFiles = Array.from(e.target.files);
+    setAttachments(selectedFiles);
+    setModalOpen(true);
+  };
   return (
     <div className="bg-white post_card mt-3 rounded-md ">
       <div className="top name p-2">
@@ -65,14 +76,28 @@ const Post_card = () => {
               <p className="text-xs">12+</p>
             </div>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 ">
             <FaRocketchat />
             <p className="text-xs">15</p>
           </div>
-          <div className="flex items-center gap-1">
-            <GrAttachment />
-            <p className="text-xs">15</p>
+          <div className="flex items-center cursor-pointer">
+            <label className="attachment-label flex cursor-pointer">
+              <GrAttachment className="attachment-icon" />
+              <p className="text-xs">25</p>
+              <input
+                type="file"
+                style={{ display: "none" }}
+                onChange={handleAttachment}
+                multiple
+              />
+            </label>
           </div>
+          <Modal
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(false)}
+            attachments={attachments}
+          />
+
           <div className="flex items-center">
             <FaCalendarAlt />
             <p className="text-xs">30-12-2022</p>
@@ -83,4 +108,6 @@ const Post_card = () => {
   );
 };
 
+
 export default Post_card;
+
