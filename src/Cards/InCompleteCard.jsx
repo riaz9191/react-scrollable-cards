@@ -10,7 +10,7 @@ const InCompleteCard = () => {
       <div className="flex justify-between">
         <div className="flex gap-2 items-center mb-4">
           <div className="bg-[#D21010] p-4 rounded-tl-2xl rounded-bl-2xl"></div>
-          <h2>Incomplete</h2>
+          <h2 className="font-bold">Incomplete</h2>
         </div>
         <p className="bg-[#E8EEF3] rounded-lg p-2 px-3 ">0</p>
       </div>

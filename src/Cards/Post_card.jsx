@@ -38,7 +38,7 @@ const Post_card = () => {
           <p className="text-xs">Lorem ipsum dolor sit amet.</p>
         </div>
         <div className="flex items-center gap-2 bg-gray-100 rounded-md px-1 py-2">
-          <p>
+          <p className="text-base">
             <FaCalendarDay />{" "}
           </p>
           <p className="text-xs">1/2</p>
