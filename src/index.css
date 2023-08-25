@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 255, 0.694); /* Set the color of the thumb (scrollbar handle) */
+  background-color: #0070BB; /* Set the color of the thumb (scrollbar handle) */
   border-radius: 4px; /* Set the border radius of the thumb */
 }
 
